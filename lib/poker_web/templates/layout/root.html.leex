@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "Poker", suffix: " · Phoenix Framework" %>
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+      <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/bootstrap.min.css") %>"/>
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body style="background: #e2e8f0">
+    <header>
+      <section class="container">
+
+        <div class="phx-hero" style="background: white;margin-top: 20px;">
+
+          <img src="<%= Routes.static_path(@conn, "/images/poker3.png") %>" style="width: 60px;display: inline-block;" alt="Phoenix Framework Logo"/>
+          <h1 style="display: inline-block;"> Joseph's poker room   </h1>
+        </div>
+
+      </section>
+    </header>
+    <%= @inner_content %>
+  </body>
+</html>
