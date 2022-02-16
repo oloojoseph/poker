@@ -48,7 +48,7 @@ defmodule PokerWeb.PageLive do
       fn _x ->
         Enum.into([Card.list_ranks() |> Enum.random(), Card.list_clubs() |> Enum.random()], " ")
       end
-    )
+    )|> List.to_string()
   end
 
   def random_two() do
@@ -57,6 +57,6 @@ defmodule PokerWeb.PageLive do
       fn _x ->
         Enum.into([Card.list_ranks() |> Enum.random(), Card.list_clubs() |> Enum.random()], " ")
       end
-    )
+    )|> List.to_string()
   end
 end
