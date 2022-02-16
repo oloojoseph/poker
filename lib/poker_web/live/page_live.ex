@@ -7,8 +7,6 @@ defmodule PokerWeb.PageLive do
     user_one = MnemonicSlugs.generate_slug(2)
     user_two = MnemonicSlugs.generate_slug(2)
 
-    # {:ok, assign(socket, result: "", data_one: "2H 3D 5S 9C KD", data_two: "2C 3H 4S 8C KH", user_one: user_one, user_two: user_two, loading: false)}
-
     {:ok,
      assign(socket,
        result: "",
