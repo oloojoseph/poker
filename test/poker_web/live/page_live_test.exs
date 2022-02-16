@@ -98,17 +98,5 @@ defmodule PokerWeb.PageLiveTest do
     end
   end
   
-    describe "simulate random games" do
-    test "prints out result" do
-      Enum.map(
-        0..1000,
-        fn _x ->
-      output = Card.play("Black", PageLive.random_one(), "White", PageLive.random_two())
-      IO.puts assert output
-
-        end
-       )
-
-    end
-  end
+  
 end
